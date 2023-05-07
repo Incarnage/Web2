@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+body{
+    position: relative;
+    font-family: 'Inter', sans-serif; 
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    position: relative;
+    font-family: 'Quicksand', serif;
+}
+
+
+.navbar{
+    position: relative;
+    background:linear-gradient(180deg, #F8B0B0 0%, rgba(248, 176, 176, 0) 100%);
+    border-radius: 0px;
+    font-family: 'Cormorant Garamond', serif;
+    color: black;
+}
+
+
+.homePage{
+    position: relative;
+    background: url("../img/pngwing.com.png") no-repeat;
+    height: 82vh;
+    background-size: 800px;
+    background-position: right bottom;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+
+.homePage1{
+    position: relative;
+    background: url("../img/ChatPic1.png") no-repeat;
+    height: 82vh;
+    background-size: contain;
+    background-position: center;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: right;
+
+}
+.welcomePage{
+    background: #ebe7e1 ;
+}
+
+.card-header{
+    background: #ebe7e1
+}
+
+.profile{
+    position: relative;
+    font-family: 'Quicksand', serif;
+
+}
+
+
+
+.carousel-inner {
+    margin: auto;
+  }
+
+.ilist{
+    color: black;
+    font-size: 25px;
+}
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+}
+
+.navbar-nav .active{
+    border-bottom:  #e02f2f solid 3px;
+}
