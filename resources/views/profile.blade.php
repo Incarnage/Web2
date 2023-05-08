@@ -7,9 +7,9 @@
 <div class="container-fluid profile" style="height: 300px;">
 <div class="row mt-5">
 <div class="col-4">
-    <h2 class="text-start fw-bold pt-5 pb-0 mb-0">Photos</h2>
+    <h2 class="text-start fw-bold pt-5 pb-0 mb-0">PHOTOS</h2>
         
-        <h3 class="text-start ">Upload photos in the order you like them to appear</h3>
+        <h5 class="text-start "><i>Upload photos in the order you like them to appear</i></h5>
     </div>
   <div class="col">
     
@@ -30,12 +30,12 @@
 <div class="container-fluid profile">
     <div class="row mt-3">
         <div class="col-md-auto">
-        <h2 class="text-start fw-bold  pb-0 mb-0">About Yourself</h2>
+        <h2 class="text-start fw-bold  pb-0 mb-0">ABOUT YOURSELF</h2>
         
-        <h3 class="text-start  ">Tell us about yourself</h3>
+        <h5 class="text-start  ">Tell us about yourself</h5>
         </div>
         <div class="col" >
-        <hr style="height:10px;border-width:0;color:black;background-color:black">
+        <hr style="height:10px; border-width:0; color:black; background-color:black">
         </div>
     </div>
     
@@ -49,45 +49,45 @@
 <form method="POST" action="" enctype="multipart/form-data">
 @csrf
 
-
-<div class="form-check form-check-inline">
-  <input class="form-check-input fs-5" type="radio" name="inlineRadioOptions" id="male" value="male">
-  <label class="form-check-label fs-5 fw-bold" for="inlineRadio1">Male</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input fs-5 " type="radio" name="inlineRadioOptions" id="female" value="female">
-  <label class="form-check-label fs-5 fw-bold" for="inlineRadio2">Female</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input fs-5" type="radio" name="inlineRadioOptions" id="binary" value="binary" >
-  <label class="form-check-label fs-5 fw-bold" for="inlineRadio3">Binary</label>
-</div>
-
-<div class="p-0 m-0">
+<div class="m-0">
   <p class="fw-bold fs-5">Nickname</p>
   </div>
   <div class="input-group">
   <input type="text" class="form-control" required id= "nickname" name="nickname" value="{{ old('nickname') }}" placeholder="Type in your nickname" aria-label="Username" aria-describedby="basic-addon1">
 </div>
 
+</br>
+<div class="pt-1 m-0">
+  <p class="fw-bold fs-5">Gender</p>
+  </div>
+<div class="form-check form-check-inline ms-5">
+  <input class="form-check-input fs-5" type="radio" name="inlineRadioOptions" id="male" value="male">
+  <label class="form-check-label fs-5" for="inlineRadio1">Male</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input fs-5 " type="radio" name="inlineRadioOptions" id="female" value="female">
+  <label class="form-check-label fs-5" for="inlineRadio2">Female</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input fs-5" type="radio" name="inlineRadioOptions" id="binary" value="binary" >
+  <label class="form-check-label fs-5" for="inlineRadio3">Binary</label>
+</div>
                             
-                        
+<div class="pt-4"></div>
+<div class="pt-4"></div>
 
-
-
-<div class="row pt-5 mt-4">
+<div class="row pt-4 mt-4">
 <div class="col text-center">
 
-<div class="d-grid gap-2">
+<div class="d-grid">
 <a role="button" class="btn btn-danger btn-lg" href="/home">SAVE</a>
 </div>
 
 </div>
 <div class="col text-center">
-<div class="d-grid gap-2">
+<div class="d-grid gap-1">
 <a role="button" class="btn btn-danger btn-lg" href="/home">CANCEL</a>
 </div>
-
 </div>
 </div>
 
@@ -123,6 +123,7 @@
     <option value="Our Lady of the Most Holy Trinity College Seminary">Our Lady of the Most Holy Trinity College Seminary</option>
     <option value="AMA Computer University - Naga Campus">AMA Computer University - Naga Campus</option>
     <option value="Don Bosco TVET Center - Carolina">Don Bosco TVET Center - Carolina</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 
@@ -217,6 +218,7 @@
     <option value="Gaming">Gaming</option>
     <option value="Star Gazing">Star Gazing</option>
     <option value="Foreign Language">Foreign Language</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>
@@ -241,6 +243,7 @@
     <option value="Gaming">Gaming</option>
     <option value="Star Gazing">Star Gazing</option>
     <option value="Foreign Language">Foreign Language</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>
@@ -265,6 +268,7 @@
     <option value="Gaming">Gaming</option>
     <option value="Star Gazing">Star Gazing</option>
     <option value="Foreign Language">Foreign Language</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>
@@ -297,6 +301,7 @@
     <option value="Swimming">Swimming</option>
     <option value="Theatre">Theatre</option>
     <option value="v">Wrestling</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>
@@ -321,6 +326,7 @@
     <option value="Swimming">Swimming</option>
     <option value="Theatre">Theatre</option>
     <option value="v">Wrestling</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>
@@ -345,6 +351,7 @@
     <option value="Swimming">Swimming</option>
     <option value="Theatre">Theatre</option>
     <option value="v">Wrestling</option>
+    <option value="Others">Others</option>
   </select>
 </div>
 </div>

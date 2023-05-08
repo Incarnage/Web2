@@ -27,7 +27,7 @@
             <div class="container" >
             <div class="col-3">
                 <a class="navbar-brand fw-bold fs-3" href="/home">
-                <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
+                <img src="./img/Logo.png" alt="Logo" width="110" height="110" class="d-inline-block align-text-center">
                 Ever After
                 </a>
   </div>
@@ -37,10 +37,9 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item fw-bold fs-3 m-2"><a href="/home" class="nav-link {{request()->is('home') ? 'active' : ''}}">Home</a></li>
+                    <ul class="navbar-nav mx-auto ">
+                        <li class="nav-item fw-bold fs-3 m-2"><a href="/home" class="nav-link {{request()->is('home') ? 'active' : ''}}">Home</a></li><img src="C:\Users\mtole\home.png" alt="" />
                         <li class="nav-item fw-bold fs-3 m-2"><a href="/likedyou" class="nav-link {{request()->is('likedyou') ? 'active' : ''}}">Liked You</a></li>
-                        <li class="nav-item fw-bold fs-3 m-2"><a href="/chatify" class="nav-link {{request()->is('studybuddy') ? 'active' : ''}}">Study Buddy</a></li>
                         <li class="nav-item fw-bold fs-3 m-2"><a href="/chatify" class="nav-link {{request()->is('matches') ? 'active' : ''}}">Matches</a></li>
                     </ul>
 
@@ -72,7 +71,7 @@
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold fs-5" href="/profile/add" class="request()->('profileAdd')">
+                                    <a class="dropdown-item fw-bold fs-5" href="/profile" class="request()->('profileAdd')">
                                         {{ __('Profile') }}
                                     </a>
 

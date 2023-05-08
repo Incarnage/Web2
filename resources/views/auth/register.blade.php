@@ -92,7 +92,7 @@
         <main class="">
         <div class=" rounded col-4 text-center m-auto  text-black ">
 <img src="./img/Logo.png" class="rounded mx-auto d-block" style="width: 200px" >
-<h1 class="text-center">Study,Date, & Find Matches</h1>
+<h1 class="text-center">Study, Date, & Find Matches</h1>
     </div>  
 <div class="container">
     <div class="row justify-content-center">

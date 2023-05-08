@@ -35,7 +35,7 @@
                 </button>
 
                 <div class="container collapse navbar-collapse w-50 p-3 fs-4 rounded-4" id="navbarSupportedContent" style="background-color: #F8B0B0">
-                    <div class="fw-bold m-auto ps-5">Have an account?</div>
+                    <div class="fw-bold m-2 ps-4">Have an account?</div>
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
 

@@ -23,7 +23,7 @@ class HomeController extends Controller
     public function index()
     {   
         $user = Auth::user();
-        $profiles = Profile::where('user_id', '!=', $user->id)->get();
+        $profiles = Profile::where('user_id', '!=', $user->id)->paginate(1);
         return view('home', ['profiles' => $profiles,],);
     }
 }
