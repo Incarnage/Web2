@@ -20,8 +20,8 @@ class ProfileSeeder extends Seeder
                 'img1'=>"hanni1.png",
                 'img2'=>"hanni2.jpg",
                 'img3'=>"hanni3.jpg",
-                'nickname'=>"admin",
-                'bio'=>"Test Bio",
+                'nickname'=>"Hanni",
+                'bio'=>"I was really hoping",
                 'course'=>"BSIT",
                 'school'=>"Ateneo De Naga University",
                 'age'=>19,
@@ -32,6 +32,7 @@ class ProfileSeeder extends Seeder
                 'interest1'=>"Cosplay",
                 'interest2'=>"Origami",
                 'interest3'=>"Science",
+                'gender'=>"Female",
             ]
         );
 
@@ -53,6 +54,7 @@ class ProfileSeeder extends Seeder
                 'interest1'=>"Cosplay",
                 'interest2'=>"Origami",
                 'interest3'=>"Science",
+                'gender'=>"Female",
             ]
         );
 

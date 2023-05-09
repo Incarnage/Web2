@@ -27,7 +27,7 @@
             <div class="container" >
             <div class="col-3">
                 <a class="navbar-brand fw-bold fs-3" href="/home">
-                <img src="./img/Logo.png" alt="Logo" width="110" height="110" class="d-inline-block align-text-center">
+                <img src="../img/Logo.png" alt="Logo" width="110" height="110" class="d-inline-block align-text-center">
                 Ever After
                 </a>
   </div>
@@ -75,8 +75,8 @@
                                         {{ __('Profile') }}
                                     </a>
 
-                                    <a class="dropdown-item fw-bold fs-5" href="/preference"  class="request()->('preference')">
-                                        {{ __('Preference') }}
+                                    <a class="dropdown-item fw-bold fs-5" href="/preferences"  class="request()->('preferences')">
+                                        {{ __('Preferences') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

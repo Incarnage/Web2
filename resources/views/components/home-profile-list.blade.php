@@ -38,6 +38,7 @@
       <p class="mb-3 fs-5 mt-3  "><i>{{$profile->bio}}</i></p>
 </div>
         <h1 class="mb-3 fw-bold text-uppercase ">{{$profile->nickname}}, {{$profile->age}}</h1>
+        <p class="mb-3 fs-3">{{$profile->gender}} </p>
         <p class="mb-3 fs-3">{{$profile->course}} </p>
         <p class="mb-1 fs-4">{{$profile->school}} </p>
     </div>

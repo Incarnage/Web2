@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','Liked You')
 @section('content')
-<x-home-profile-list :profiles="$profiles"></x-home-profile-list>
+<x-liked-you-profile :profiles="$profiles"></x-liked-you-profile>
 @endsection

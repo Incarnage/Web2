@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\LikedYou;
+use App\Models\preferences;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Profile;
-class LikedYouController extends Controller
+
+class PreferencesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +17,16 @@ class LikedYouController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $profiles = Profile::where('user_id', '!=', $user->id)->paginate(1);
-        return view('likedyou', ['profiles' => $profiles,],);
+       
+        // get all the products
+       
+        // if there is an authenticated user, check if admin
+        // if yes, get only the products with his id
+        
+        $profiles =Profile::where('user_id', '=', $user->id)->get();
+            
+        //pass the data to the view
+        return view('preferences', ['profiles' => $profiles,]);
     }
 
     /**
@@ -44,10 +53,10 @@ class LikedYouController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\LikedYou  $likedYou
+     * @param  \App\Models\preferences  $preferences
      * @return \Illuminate\Http\Response
      */
-    public function show(LikedYou $likedYou)
+    public function show(preferences $preferences)
     {
         //
     }
@@ -55,10 +64,10 @@ class LikedYouController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\LikedYou  $likedYou
+     * @param  \App\Models\preferences  $preferences
      * @return \Illuminate\Http\Response
      */
-    public function edit(LikedYou $likedYou)
+    public function edit(preferences $preferences)
     {
         //
     }
@@ -67,10 +76,10 @@ class LikedYouController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\LikedYou  $likedYou
+     * @param  \App\Models\preferences  $preferences
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, LikedYou $likedYou)
+    public function update(Request $request, preferences $preferences)
     {
         //
     }
@@ -78,10 +87,10 @@ class LikedYouController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\LikedYou  $likedYou
+     * @param  \App\Models\preferences  $preferences
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LikedYou $likedYou)
+    public function destroy(preferences $preferences)
     {
         //
     }

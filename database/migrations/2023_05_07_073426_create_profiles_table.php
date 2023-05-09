@@ -31,6 +31,7 @@ class CreateProfilesTable extends Migration
             $table->string("interest1");
             $table->string("interest2");
             $table->string("interest3");
+            $table->string("gender");
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');

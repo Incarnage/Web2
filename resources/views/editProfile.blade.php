@@ -1,17 +1,18 @@
 @extends('layouts.app')
-@section('title','Add')
+
+
 @section('content')
 <div>
     <div class="container-fluid p-5">
         <div class="col-4 mx-auto p-4  border border-success border-2">
-            <h4 class="text-uppercase text-center">Add Profile Information</h4>
-            <form method="POST" action="{{route('store')}}" enctype="multipart/form-data">
-                @csrf
+            <h4 class="text-uppercase text-center">Edit Product</h4>
+            <form method="POST" action="/profile/update/{{$profile->id}}" enctype="multipart/form-data">
+            @csrf
                 <div class="row mb-2">
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="product_name">Nickname</label>
-                            <input class="form-control @error('nickname') is-invalid @enderror" required id="nickname" name="nickname" type="text" placeholder="Enter your nickname" value="{{ old('nickname') }}">
+                            <input class="form-control @error('nickname') is-invalid @enderror" required id="nickname" name="nickname" type="text" placeholder="Enter your nickname" value="{{ $profile->nickname }}">
                             @error('nickname')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -53,7 +54,7 @@
                     <div class="col-sm-12">
                        
                             <label for="bio">Bio</label>
-                                     <textarea class="form-control" id="bio" name="bio" rows="1"></textarea>
+                                     <textarea class="form-control" id="bio" name="bio" rows="1" >{{$profile->bio}}</textarea>
                         
                     </div>
                 </div>
@@ -65,8 +66,8 @@
                             <label for="school">School</label>
                                 <div class="input-group">
                             
-                                <select class="form-select" id="school" name="school">
-                                <option selected>Select your school</option>
+                                <select class="form-select" id="school" name="school" >
+                                <option selected>{{$profile->school}}</option>
                                 <option value="Ateneo de Naga University">Ateneo de Naga University</option>
                                 <option value="University of Nueva Caceres">University of Nueva Caceres</option>
                                 <option value="STI College - Naga">STI College - Naga</option>
@@ -91,7 +92,7 @@
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="course">Course</label>
-                            <input class="form-control @error('course') is-invalid @enderror" required id="course" name="course" type="text" placeholder="Enter your course" value="{{ old('course') }}">
+                            <input class="form-control @error('course') is-invalid @enderror" required id="course" name="course" type="text" placeholder="Enter your course" value="{{ $profile->course }}">
                             @error('course')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -108,7 +109,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="age" name="age">
-                                <option selected>Select your age</option>
+                                <option selected>{{$profile->age}}</option>
                                 <option value="18">18</option>
                                 <option value="19">19</option>
                                 <option value="20">20</option>
@@ -136,7 +137,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="height" name="height">
-                                <option selected>Select your height</option>
+                                <option selected>{{$profile->height}}</option>
                                 <option value="4ft below">4ft below</option>
                                 <option value="5ft">5ft</option>
                                 <option value="5'1">5'1</option>
@@ -170,7 +171,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="hobbies1" name="hobbies1">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->hobbies1}}</option>
                                 <option value="Writing">Writing</option>
                                 <option value="Blogging">Blogging</option>
                                 <option value="Photography">Photography</option>
@@ -197,7 +198,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="hobbies2" name="hobbies2">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->hobbies2}}</option>
                                 <option value="Writing">Writing</option>
                                 <option value="Blogging">Blogging</option>
                                 <option value="Photography">Photography</option>
@@ -225,7 +226,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="hobbies3" name="hobbies3">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->hobbies3}}</option>
                                 <option value="Writing">Writing</option>
                                 <option value="Blogging">Blogging</option>
                                 <option value="Photography">Photography</option>
@@ -256,7 +257,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="interest1" name="interest1">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->interest1}}</option>
                                 <option value="Animals">Animals</option>
                                 <option value="Architecture">Architecture</option>
                                 <option value="Botany">Botany</option>
@@ -283,7 +284,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="interest2" name="interest2">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->interest1}}</option>
                                 <option value="Animals">Animals</option>
                                 <option value="Architecture">Architecture</option>
                                 <option value="Botany">Botany</option>
@@ -311,7 +312,7 @@
                                 <div class="input-group">
                             
                                 <select class="form-select" id="interest3" name="interest3">
-                                <option selected>Select</option>
+                                <option selected>{{$profile->interest1}}</option>
                                 <option value="Animals">Animals</option>
                                 <option value="Architecture">Architecture</option>
                                 <option value="Botany">Botany</option>
@@ -343,9 +344,9 @@
 
 
                         <div class="col-sm-6 ">
-                            <img id="preview-image-before-upload" src="{{asset('/img/add.png')}}
+                            <img id="preview-image-before-upload" src="{{asset('/img/'.$profile->img1)}}
 " alt="preview image" style="height: 200px; width: 200px; object-fit: cover;" class=" mb-2">
-                            <input class=" form-control @error('img') is-invalid @enderror " type="file" name="img1" value="{{ old('img') }}"  id="img" accept="image/*">
+                            <input class=" form-control @error('img') is-invalid @enderror " type="file" name="img1" value=""  id="img" accept="image/*">
                             @error('img')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -355,12 +356,14 @@
                     </div>
                 </div>
                 <div class=" mt-5">
-                    <button class="btn-dark-green ">Add Information</button>
+                    <button class="btn-dark-green ">Edit Information</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+
+
 @endsection
 @section('javascript')
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -379,5 +382,5 @@
 
     });
 </script>
-
 @endsection
+
