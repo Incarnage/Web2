@@ -1,4 +1,5 @@
 <!doctype html>
+@section('title','Register')
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -26,7 +27,7 @@
         <nav class="navbar navbar-expand-md navbar-light shadow-sm  ">
             <div class="container" >
             <div class="col-3">
-                <a class="navbar-brand fw-bold fs-3" href="/home">
+                <a class="navbar-brand fw-bold fs-3" href="">
                 <img src="./img/Logo.png" alt="Logo" width="130" height="140" class="d-inline-block align-text-center">
                 Ever After
                 </a>
