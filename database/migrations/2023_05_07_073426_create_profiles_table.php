@@ -17,8 +17,8 @@ class CreateProfilesTable extends Migration
             $table->id();
             $table->unsignedBigInteger("user_id");
             $table->string("img1");
-            $table->string("img2");
-            $table->string("img3");
+            $table->string("img2")->nullable();
+            $table->string("img3")->nullable();
             $table->string("nickname");
             $table->string("bio");
             $table->string("course");
@@ -31,7 +31,7 @@ class CreateProfilesTable extends Migration
             $table->string("interest1");
             $table->string("interest2");
             $table->string("interest3");
-            $table->string("gender");
+            $table->string("gender")->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
